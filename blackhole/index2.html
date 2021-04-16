@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>black hole</title>
+    <style>
+        body{
+            background: url(img/zzz.jpg) no-repeat center;
+            background-size: cover;
+            animation: bang 10s ease-in-out infinite;
+        }
+        .space{
+            width: 300px;
+            height: 1000px;
+            margin: 0 auto;
+            position: relative;
+            animation: space 10s ease-in-out infinite;
+        }
+        .hole{
+            width: 300px;
+            height: 300px;
+            background: url(img/star2.png) no-repeat center;
+            background-size: cover;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: hole 10s ease-in-out infinite;
+        }
+    
+        .hole2{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            position: absolute;
+            background: url(img/star2.png) no-repeat center;
+            background-size: cover;
+            bottom: 0;
+            left: 0;
+            animation: hole2 10s ease-in-out infinite;
+        }
+        .hole3{
+            width: 0px;
+            height: 0px;
+            background: #fafafa;
+            border-radius: 50%;
+            animation: hole3 10s ease-in-out infinite; 
+        }
+        @keyframes bang{
+            0%{}
+            69%{
+                background: url(img/zzz.jpg) no-repeat center;
+                background-size: cover;
+            }
+            70%{
+                background: url(img/z.jpg) no-repeat center;
+                background-size: cover; opacity: 0.8;
+            }
+            100%{}
+        }
+        @keyframes space{
+            0%{
+                transform: rotate(0deg);
+            }
+            15%{
+                transform: rotate(10deg);
+            }
+            25%{
+                transform: rotate(30deg);
+            }
+            40%{
+                transform: rotate(60deg);
+            }
+            50%{
+                transform: rotate(100deg);
+            }
+            55%{
+                transform: rotate(180deg);
+            }
+            65%{
+                transform: rotate(360deg);
+            }
+            75%{
+                transform: rotate(480deg);
+            }
+            90%{
+                transform: rotate(560deg);
+            }
+            100%{
+                transform: rotate(630deg);
+            }
+        }
+        @keyframes hole{
+            0%{transform: translate(0,5%);}
+            10%{transform: translate(0,10%);}
+            25%{transform: translate(0,20%);}
+            50%{transform: translate(0,50%);}
+            65%{transform: translate(0,60%);}
+            75%{transform: translate(0,90%);}
+            80%{transform: translate(0,100%);}
+            100%{transform: translate(0,100%);}
+            
+        }
+        @keyframes hole2{
+            0%{transform: translate(0,-5%);}
+            10%{transform: translate(0,-10%);}
+            25%{transform: translate(0,-20%);}
+            50%{transform: translate(0,-50%);}
+            60%{transform: translate(0,-55%);}
+            75%{transform: translate(0,-90%);}
+            80%{transform: translate(0,-100%);}
+            100%{transform: translate(0,-100%);}
+        }
+         @keyframes hole3{
+            0%{}
+            25%{}
+            50%{}
+            74%{width: 0px; height: 0px;}
+            75%{width: 300px; height: 300px;background: url(img/blackhole.png) no-repeat center ;background-size: cover; position:absolute; z-index: 10; top:50%; left: 50%; transform: translate(-50%,-50%);}
+            80%{width: 500px; height: 500px; background: url(img/blackhole.png) no-repeat center ;background-size: cover; position:absolute; z-index: 10; top:50%; left: 50%; transform: translate(-50%,-50%);}
+            100%{width: 700px; height: 700px; background: url(img/blackhole.png) no-repeat center; background-size: cover; position: absolute; z-index: 10; top:50%; left: 50%; transform: translate(-50%,-50%);}
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <div class="space">
+        <div class=hole></div>
+        <div class=hole2></div>
+        <div class="hole3"></div>
+    </div>
+</body>
+</html>
